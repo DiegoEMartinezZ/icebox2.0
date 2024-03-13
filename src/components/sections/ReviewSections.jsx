@@ -2,18 +2,34 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import TitleSm from "../ui/TitleSm";
+import Texts from "../ui/Texts";
 
 const ReviewSections = () => {
   return (
     <section className="m-10">
       <TitleSm name={"Reviews"} />
+      <div className="flex">
+        <a href="" className="mr-10">
+          <Texts txt={"All Reviews"} />
+        </a>
+        <a href="" className="mr-10">
+          <Texts txt={"Positive Reviews"} />
+        </a>
+        <a href="" className="mr-10">
+          <Texts txt={"Negative Reviews"} />
+        </a>
+        <a href="" className="mr-10">
+          <Texts txt={"Recent Reviews"} />
+        </a>
+      </div>
+
       <div>
         <ul className="text-left text-pizazz-1">
           <li className="mb-3">
             <div className=" mt-4 flex flex-nowrap  items-center justify-start  bg-pizazz-500 p-2 text-sm font-medium text-pizazz-10">
               <FontAwesomeIcon
                 icon={faThumbsUp}
-                className="mx-2 rounded bg-validate-100 p-2 text-2xl text-pizazz-1"
+                className="mx-2 rounded bg-validate-100 p-2 text-2xl text-pizazz-10"
               />
               <div className="mx-2">
                 <h4 className="">LowOnCYAN(NOMBRE DE USUARIO)</h4>

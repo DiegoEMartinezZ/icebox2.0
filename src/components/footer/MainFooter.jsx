@@ -9,15 +9,9 @@ import {
 
 const MainFooter = () => {
   return (
-    <footer className="relative bottom-0 left-0 right-0 flex justify-between bg-pizazz-10 p-10 text-pizazz-500">
-      <div className="no-wrap flex">
-        <SocialMedia icon={faFacebook} />
-        <SocialMedia icon={faTwitch} />
-        <SocialMedia icon={faYoutube} />
-        <SocialMedia icon={faDiscord} />
-      </div>
+    <footer className="relative bottom-0 left-0 right-0 bg-pizazz-10 p-6 text-pizazz-500">
       <section>
-        <ul className="no-wrap flex justify-between">
+        <ul className="mx-5 flex flex-nowrap justify-around text-sm">
           <li className="mx-5 cursor-pointer hover:text-pizazz-100">
             {" "}
             Featured & Recommended{" "}

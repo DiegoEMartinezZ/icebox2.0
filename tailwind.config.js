@@ -20,7 +20,7 @@ export default {
         950: "#481600",
       },
       validate: {
-        100: "#00D1B1",
+        100: "#09e600",
       },
       unvalidate: {
         100: "#D10021",

@@ -46,10 +46,12 @@ const GameDetails = () => {
   return (
     <>
       <NavBar />
-      <section className="mt-20 flex flex-row flex-nowrap items-center justify-around">
+      <div className="w-screen bg-gradient-to-r from-pizazz-500 to-pizazz-200 p-2 text-center">
+        <h4> All Games / Indie Games / {oneProduct.name} </h4>
+      </div>
+      <section className="mt-10 flex flex-row flex-nowrap items-center justify-around">
         <ul className=" mx-10  w-1/2 text-left text-pizazz-1">
           <li>
-            <h4> All Games / Indie Games / {oneProduct.name} </h4>
             <Title name={oneProduct.name} />
             {/* Permitir clasificar el juego Y que permita ver la clasificacion actual
             del juego */}

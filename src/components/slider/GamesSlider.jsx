@@ -8,6 +8,8 @@ import { useState } from "react";
 import ArrowSliders from "../ui/ArrowSliders";
 import Buttons from "../ui/Buttons";
 import { Link } from "react-router-dom";
+import Title from "../ui/Title";
+import TitleSm from "../ui/TitleSm";
 
 const test = [
   {
@@ -47,7 +49,7 @@ const GamesSlider = ({ nameSection }) => {
   };
 
   return (
-    <div className="relative mb-1 h-screen w-full">
+    <div className="relative h-screen w-full">
       {/* Map array of name, price, images */}
       {test.map((product, idx) => (
         <ul
@@ -59,7 +61,7 @@ const GamesSlider = ({ nameSection }) => {
               <img
                 src={product.img}
                 alt={`Slide ${product.id}`}
-                className={`absolute bottom-0 left-0 right-0 top-0 h-screen w-screen cursor-pointer transition-opacity duration-500 ${
+                className={`absolute bottom-0 left-0 right-0 top-0 h-screen w-screen cursor-pointer transition-opacity duration-700 ${
                   idx === currentID
                     ? "opacity-100"
                     : "pointer-events-none opacity-0"
@@ -68,13 +70,15 @@ const GamesSlider = ({ nameSection }) => {
             </Link>
           </li>
           <li
-            className={`absolute  right-0  h-screen w-1/3 bg-gradient-to-t from-pizazz-10  pt-10 text-2xl text-pizazz-1 
-            transition-opacity duration-500 ${
-              idx === currentID ? "opacity-100" : "opacity-0"
+            className={`absolute right-0 h-screen w-1/3 bg-gradient-to-bl from-pizazz-10 pt-10 text-2xl text-pizazz-1 
+            transition-opacity duration-700 ${
+              idx === currentID
+                ? "opacity-100"
+                : "pointer-events-none opacity-0"
             }`}
           >
             <section className="mt-44 py-2">
-              <h2 className="my-2 font-bold">{product.name}</h2>
+              <TitleSm name={product.name} />
               <h3>{product.price} </h3>
               <div className="no-wrap my-10 flex flex-col">
                 <Buttons btnName={"Buy Now"} icon={faReceipt} />
@@ -84,13 +88,13 @@ const GamesSlider = ({ nameSection }) => {
           </li>
         </ul>
       ))}
-      {/* Buttons and title container of the slider*/}
-      <div className="absolute left-0 right-0 flex items-center justify-around bg-pizazz-500 px-6 py-1 text-pizazz-10">
+      {/* Slider, Buttons and title each of the slider*/}
+      <div className="py-2/3 absolute left-0 right-0 flex items-center justify-around bg-gradient-to-r from-pizazz-500 to-pizazz-200 text-pizazz-10">
         <button className="text-white rounded-r-md" onClick={handlerPrevSlide}>
           <ArrowSliders arrow={faAngleLeft} />
         </button>
 
-        <h3 className="font-lighter text-lg">{nameSection}</h3>
+        <h3 className="font-lighter text-base">{nameSection}</h3>
 
         <button className="text-white rounded-r-md " onClick={handlerNextSlide}>
           <ArrowSliders arrow={faAngleRight} />
